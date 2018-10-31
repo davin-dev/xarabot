@@ -1,0 +1,17 @@
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\petshi.exe.config
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\petshi.exe
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\petshi.pdb
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\NetTelegramBotApi.dll
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\Newtonsoft.Json.dll
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\bin\Debug\Newtonsoft.Json.xml
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\obj\Debug\petshi.exe
+c:\users\alireza\documents\visual studio 2015\Projects\petshi\petshi\obj\Debug\petshi.pdb
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\PersianDateTime.dll
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\PersianDateTime.xml
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\RestSharp.dll
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\RestSharp.xml
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\NetTelegramBotApi.4.2.0.0.Fakes.dll
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\bin\Debug\NetTelegramBotApi.4.2.0.0.Fakes.xml
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\obj\Debug\petshi.csprojAssemblyReference.cache
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\obj\Debug\petshi.csproj.CoreCompileInputs.cache
+C:\Users\Alireza\Documents\Visual Studio 2015\Projects\petshi\petshi\obj\Debug\petshi.csproj.CopyComplete
