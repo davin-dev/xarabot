@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using NetTelegramBotApi;
 using NetTelegramBotApi.Requests;
@@ -82,13 +82,11 @@ namespace petshi
                             continue;
 
                         }
-                        else if (text.Contains("دلار") || text.Contains("سکه"))
+                        else if (text.Contains("دلار"))
                         {
 
                             if (update.Message.From.Username != "infeXno")
                             {
-                                if (text.Contains("دلار"))
-                                {
                                     WebClient n = new WebClient();
                                     var json = n.DownloadString("http://www.tgju.org/?act=sanarateservice&client=tgju&noview&type=json");
                                     Arz a1 = JsonConvert.DeserializeObject<Arz>(json);
@@ -99,18 +97,10 @@ namespace petshi
                                     var req = new SendMessage(update.Message.Chat.Id, "الان قیمت هر دلار " +nocomma + " تومن هستش");
                                     req.ReplyToMessageId = update.Message.MessageId;
                                     await bot.MakeRequestAsync(req);
-                                }
-                                else
-                                {
-                                    var req = new SendMessage(update.Message.Chat.Id, "قیمت هر سکه الان 4,750,000 تومنه");
-                                    req.ReplyToMessageId = update.Message.MessageId;
-                                    await bot.MakeRequestAsync(req);
-                                }
                             }
                             else
                             {
-                                if (text.Contains("دلار"))
-                                {
+                               
                                     WebClient n = new WebClient();
                                     var json = n.DownloadString("http://www.tgju.org/?act=sanarateservice&client=tgju&noview&type=json");
                                     Arz a1 = JsonConvert.DeserializeObject<Arz>(json);
@@ -121,14 +111,6 @@ namespace petshi
                                     var req = new SendMessage(update.Message.Chat.Id, "ددی الان قیمت هر دلار " + nocomma + " تومن هستش ^^♥");
                                     req.ReplyToMessageId = update.Message.MessageId;
                                     await bot.MakeRequestAsync(req);
-                                }
-                                else
-                                {
-                                    var req = new SendMessage(update.Message.Chat.Id, "قیمت هر سکه الان 4,750,000 تومنه ددی");
-                                    req.ReplyToMessageId = update.Message.MessageId;
-                                    await bot.MakeRequestAsync(req);
-                                }
-
                             }
                             continue;
                         }
@@ -272,13 +254,16 @@ namespace petshi
                             result = s1.Split(ch, 2);
                             string kalame = result[1];
                             WebClient n = new WebClient();
-                            var json = n.DownloadString("http://api.vajehyab.com/v3/search?token=63259.cSc9YBNznnqQ5AYnIMizvMaxXf2ErIJEBVNAwA9U&q="+ kalame +"&type=exact");
+                            var json = n.DownloadString("http://api.urbandictionary.com/v0/define?term=" + kalame);
                             mani m1 = JsonConvert.DeserializeObject<mani>(json);
 
-                            if (m1.data.num_found > 1)
+                            if (m1.list.Length > 0)
                             {
-                                string man = m1.data.results[0].text;
-                                var req = new SendMessage(update.Message.Chat.Id, man);
+                                string man = m1.list[0].definition + "\n\n Examples : \n" + m1.list[0].example;
+                                string edit = man.Replace("[", "");
+                                string edit1 = edit.Replace("]", "");
+                                string edit2 = edit1.Replace("â€™", "");
+                                var req = new SendMessage(update.Message.Chat.Id, edit2);
                                 req.ReplyToMessageId = update.Message.MessageId;
                                 await bot.MakeRequestAsync(req);
                             }
@@ -552,7 +537,7 @@ namespace petshi
                             /////////////////////////////////////////////////////////
                             /////////////////////////////////////////////////////////
 
-                            if (update.Message.Chat.Id == -1001197532829)
+                            if (update.Message.Chat.Id == -1001197532829)///////WICKED GROUP
                             {
 
                                 //////////////////////KNOWN PEOPLE//////////////////////
@@ -746,6 +731,12 @@ namespace petshi
                                     continue;
                                 }
                                 ///////////UNKNOW PEOPLE/////////
+                                else if (text.Contains("شوهر"))
+                                {
+                                    var req = new SendMessage(update.Message.Chat.Id, "من میخوام با ددی ازدواج کنم ^^");
+                                    req.ReplyToMessageId = update.Message.MessageId;
+                                    await bot.MakeRequestAsync(req);
+                                }
 
                                 else if (update.Message.From.Username != "infeXno" && text.Contains("هوی") || text.Contains("ربات"))
                                 {
@@ -837,13 +828,13 @@ namespace petshi
                             ///////////////////REGULAR GROUP/////////////////
                             ///////////////////REGULAR GROUP/////////////////
 
-                            ///////////////////ADD GROUP/////////////////
-                            if (update.Message.NewChatMember.Id == 373634438)
-                            {
-                                var req = new SendMessage(update.Message.Chat.Id, "شل کنید اومدم");
-                                req.ReplyToMessageId = update.Message.From.Id;
-                                await bot.MakeRequestAsync(req);
-                            }
+                            /////////////////////ADD GROUP/////////////////
+                            //if (update.Message.NewChatMember.Id == 373634438)
+                            //{
+                            //    var req = new SendMessage(update.Message.Chat.Id, "شل کنید اومدم");
+                            //    req.ReplyToMessageId = update.Message.From.Id;
+                            //    await bot.MakeRequestAsync(req);
+                            //}
                             else if (job == 1 && update.Message.NewChatMember != null)
                             {
                                 if (update.Message.From.Id != 373634438)
